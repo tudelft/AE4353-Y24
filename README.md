@@ -183,39 +183,48 @@ Well done! Your setup on MacOS is complete, and you are ready to start working o
 ## Usage
 To use this project, follow the steps below:
 
-0. Make sure your git credentials will be available to devcontainers, see [here](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials#_using-ssh-keys).
-1. Clone the repository and create a private mirror, see the [steps](private_repo.md).
+1. Ensure your Git credentials are available in DevContainers by configuring them according to the guidelines provided [here](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials#_using-ssh-keys). This will allow seamless access to repositories without repeated authentication prompts while working inside DevContainers.
+   
+2. Clone the repository and create a private mirror by following the steps outlined [here](private_repo.md). This will help you set up a secure, private copy of the repository for your use.
 
-2. Create a dataset folder outside the cloned repository. Make sure you have enough free space for the folder to host the datasets (> 10GB).
+3. Set up a dataset folder by following these steps:
+
+- Create a dataset folder outside the cloned repository by running the following command. Replace `<dataset_folder_parent_directory>` and `<dataset_folder_name>` with your desired path and folder name:
    ```bash
    mkdir <dataset_folder_parent_directory>/<dataset_folder_name>
    ```
-   Then modify the `.devcontainer/devcontainer.json`, uncomment the line under the "mounts" section and replace `<your-external-data-directory>` with your dataset folder path `<dataset_folder_parent_directory>/<dataset_folder_name>`.
 
-   > 💡 Tip 1: For WSL2 users, if you want to create the dataset folder within WSL2, you can access your WSL files through File Explorer in Windows and enter `\\wsl$` in the address bar. Navigate to `Ubuntu-<version>\home\<your-username>` (replace `<version>` with your WSL2 distribution version and `<your-username>` with your Linux username).
-   > 
-   > 💡 Tip 2: For WSL2 users, you could also create the dataset directory outside WSL and in your Windows file space, which can be accessed under the path `/mnt/<disk>/` within WSL. An example of `<your-external-data-directory>` could be `/mnt/c/Users/Downloads/Dataset_Folder`.
+- Modify the `.devcontainer/devcontainer.json` file:
+	- Open the `.devcontainer/devcontainer.json` file.
+	- Locate the "mounts" section.
+	- Uncomment the line under the "mounts" section.
+	- Replace `<your-external-data-directory>` with your dataset folder path `<dataset_folder_parent_directory>/<dataset_folder_name>`.
+ 
+    > 💡 Make sure there is at least 10GB of free space available to host the datasets.
+    > 
+    > 💡 For WSL2 users, if you want to create the dataset folder within WSL2, you can access your WSL2 files through File Explorer in Windows and enter `\\wsl$` in the address bar. Navigate to `Ubuntu-<version>\home\<your-username>` (replace `<version>` with your WSL2 distribution version and `<your-username>` with your Linux username).
+    >
+    > 💡 For WSL2 users, if you want to create the dataset directory outside WSL2 and in your Windows file space, you can access it under the path `/mnt/<disk>/` within WSL2. An example of `<your-external-data-directory>` could be `/mnt/c/Users/Downloads/Dataset_Folder`.
 
-3. If you have a CUDA-enabled GPU with your machine, you could optionally enable GPU support by uncommeting the lines of `nvidia` channel and `pytorch-cuda` package under `env.yml`.
+4. If your machine has a CUDA-enabled GPU, you can optionally enable GPU support by uncommenting the lines for the `nvidia` channel and the `pytorch-cuda` package in the `env.yml` file.
 
-4. Download the required dataset(s) for the exercise/competition from [SurfDrive](https://surfdrive.surf.nl/files/index.php/s/QzvOHJx2o4KIESI) and move the file(s) to the above dataset folder.
+5. Download the required dataset(s) for the exercise/competition from [SurfDrive](https://surfdrive.surf.nl/files/index.php/s/QzvOHJx2o4KIESI) and move the file(s) to the above dataset folder.
     > 💡 Keep the file in its original format (e.g. `.npz`) without unzipping or extracting any contents unless being instructed explicitly.
 
-5. Open Visual Studio Code, click "File -> Open Folder" and select the repository folder.
-   > 💡 For WSL2 users, first connect vscode to WSL backend by pressing `F1` and select `WSL: Connect to WSL`.
+6. Open Visual Studio Code, click "File -> Open Folder," and select the repository folder. For WSL2 users, first connect to the WSL2 backend by pressing `F1` and selecting `WSL: Connect to WSL`.
    
-3. Set up the development environment:
+7. Set up the development environment:
 - Ensure you have the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed.
 
 - When you open the folder in Visual Studio Code, a prompt will appear in the bottom-right corner asking if you want to `Reopen in Container`. Click this prompt to build the Docker container, which will open a new Visual Studio Code window inside the container. This container provides a pre-configured environment with all the necessary packages to run the scripts.
 
-- Alternatively, you can bring up Command Palette (`⇧⌘P` on MacOS or `Ctrl+Shift+P` on Windows/Linux) of Visual Studio Code to type and select `Reopen in Container`.
+- Alternatively, open the Command Palette in Visual Studio Code (`⇧⌘P` on macOS or `Ctrl+Shift+P` on Windows/Linux) and select `Reopen in Container`.
 
     > 💡 Container build may take up to 10 minutes and require up to 10GB of storage.
-    
-    > 💡 Tip 1: During the build process of the container, click the bottom-right corner of the window to view detailed progress logs.
-    
-    > 💡 Tip 2: Once the installation is complete and the container is open, if you encounter an "Invalid Python Interpreter" error, open the Command Palette (`⇧⌘P` on MacOS or `Ctrl+Shift+P` on Windows/Linux) and select `Developer: Reload Window`. Ensure that the Jupyter notebook kernel starts with the prefix `AE4353` to confirm everything is functioning correctly.
+    >
+    > 💡 During the build process of the container, click the bottom-right corner of the window to view detailed progress logs.
+    >
+    > 💡 Once the installation is complete and the container is open, if you encounter an "Invalid Python Interpreter" error, open the Command Palette (`⇧⌘P` on MacOS or `Ctrl+Shift+P` on Windows/Linux) and select `Developer: Reload Window`. Ensure that the Jupyter notebook kernel starts with the prefix `AE4353` to confirm everything is functioning correctly.
 
 Good job! You can now start working on the project using the pre-configured environment.
 

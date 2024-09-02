@@ -6,7 +6,7 @@ You might want to create a private personal repo to push your code written for t
     ```
 
  2. [Create a new private repository on Github](https://help.github.com/articles/creating-a-new-repository/) and name it as you like: <personal-repo-name>.
-    > If you are unable to create a private repo, you can request unlimited private repos as a studant by getting
+    > If you are unable to create a private repo, you can request unlimited private repos as a student by getting
     > the [student pack](https://education.github.com/pack) from Github.
 
  3. Rename the old URL and add the personal repo URL as an upstream. Disable pushing to the public repo for which you do not have push access.
@@ -21,7 +21,7 @@ You might want to create a private personal repo to push your code written for t
     git push origin
     ```
 
- 4. Set origin as default push destination.
+ 5. Set origin as default push destination.
     ```bash
     git branch --set-upstream-to=origin/main
     ```
