@@ -1,0 +1,62 @@
+{
+    "name": "ae4353",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".."
+    },
+    "mounts": [
+        // Bind mount data here if necessary e.g.
+        //"source=<your-external-data-directory>,target=${containerWorkspaceFolder}/data,type=bind"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": "true",
+            "username": "vscode",
+            "userUid": "1000",
+            "userGid": "1000",
+            "upgradePackages": "true"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        }
+    },
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            "settings": {
+                // TODO: change to specific conda env python bin
+                "python.defaultInterpreterPath": "/opt/conda/envs/AE4353/bin/python",
+                "python.linting.enabled": true,
+                "notebook.defaultFormatter": "ms-python.black-formatter",
+                "notebook.formatOnSave.enabled": true,
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.formatOnSave": true
+                }
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "ms-toolsai.jupyter",
+                "github.copilot",
+                "github.copilot-chat"
+            ]
+        }
+    },
+    "hostRequirements": {
+        "gpu": "optional"
+    },
+    "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "uname -a",
+    // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode",
+    "remoteEnv": {
+        "SERVICE_HOST": "host.docker.internal",
+        "SERVICE_PORT": "9876"
+    }
+}
