@@ -200,6 +200,8 @@ To use this project, follow the steps below:
 	- Uncomment the line under the "mounts" section.
 	- Replace `<your-external-data-directory>` with your dataset folder path `<dataset_folder_parent_directory>/<dataset_folder_name>`.
  
+    > 💡 Note `<your-external-data-directory>` needs to be written in absolute path. (e.g. `/home/<user-name>/downloads/`)
+    > 
     > 💡 Make sure there is at least 10GB of free space available to host the datasets.
     > 
     > 💡 For WSL2 users, if you want to create the dataset folder within WSL2, you can access your WSL2 files through File Explorer in Windows and enter `\\wsl$` in the address bar. Navigate to `Ubuntu-<version>\home\<your-username>` (replace `<version>` with your WSL2 distribution version and `<your-username>` with your Linux username).
