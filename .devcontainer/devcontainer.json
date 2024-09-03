@@ -28,6 +28,10 @@
                 // TODO: change to specific conda env python bin
                 "python.defaultInterpreterPath": "/opt/conda/envs/AE4353/bin/python",
                 "python.linting.enabled": true,
+                "jupyter.widgetScriptSources": [
+                    "jsdelivr.com",
+                    "unpkg.com"
+                ],
                 "notebook.defaultFormatter": "ms-python.black-formatter",
                 "notebook.formatOnSave.enabled": true,
                 "python.terminal.activateEnvironment": true,
