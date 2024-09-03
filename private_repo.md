@@ -11,6 +11,7 @@ You might want to create a private personal repo to push your code written for t
 
  3. Rename the old URL and add the personal repo URL as an upstream. Disable pushing to the public repo for which you do not have push access.
     ```bash
+    cd <your-desired-directory>
     git remote rename origin upstream
     git remote add origin git@github.com:<your_username>/<personal-repo-name>.git
     git remote set-url --push upstream DISABLE
