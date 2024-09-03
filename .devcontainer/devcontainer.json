@@ -48,6 +48,11 @@
     "hostRequirements": {
         "gpu": "optional"
     },
+    // Uncomment the below "runArgs" section if you intend to use a GPU.
+    // "runArgs": [
+    //     "--gpus",
+    //     "all"
+    // ],
     "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],

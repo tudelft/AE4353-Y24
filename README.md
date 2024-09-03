@@ -208,7 +208,7 @@ To use this project, follow the steps below:
     >
     > 💡 For WSL2 users, if you want to create the dataset directory outside WSL2 and in your Windows file space, you can access it under the path `/mnt/<disk>/` within WSL2. An example of `<your-external-data-directory>` could be `/mnt/c/Users/Downloads/Dataset_Folder`.
 
-4. If your machine has a CUDA-enabled GPU, you can optionally enable GPU support by uncommenting the lines for the `nvidia` channel and the `pytorch-cuda` package in the `env.yml` file.
+4. If your machine has a CUDA-enabled GPU, you can follow the steps in [CUDA Guide](cuda_guide.md) in order to use GPUs in the devcontainer.
 
 5. Download the required dataset(s) for the exercise/competition from [SurfDrive](https://surfdrive.surf.nl/files/index.php/s/QzvOHJx2o4KIESI) and move the file(s) to the above dataset folder.
     > 💡 Keep the file in its original format (e.g. `.npz`) without unzipping or extracting any contents unless being instructed explicitly.
