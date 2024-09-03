@@ -43,7 +43,7 @@ To get started with this project on Windows, follow the steps below:
 
 1. Ensure that Visual Studio Code is equipped with the necessary extensions. Install the following extensions in Visual Studio Code: [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers), [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker), and [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl).
 
-2. Install [Windows Subsystem for Linux (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package) with the [Ubuntu 20.04](https://www.microsoft.com/store/productId/9MTTCL66CPXJ?ocid=pdpshare) distribution. This will set up an Ubuntu terminal environment, which is necessary for the following steps.
+2. Install [Windows Subsystem for Linux (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/install-manual) with the [Ubuntu 20.04](https://www.microsoft.com/store/productId/9MTTCL66CPXJ?ocid=pdpshare) distribution. This will set up an Ubuntu terminal environment, which is necessary for the following steps.
 
 3. Install [Docker Engine](https://docs.docker.com/engine/install/ubuntu/) in WSL2 by following these steps:
     
