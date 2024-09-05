@@ -218,6 +218,13 @@ To use this project, follow the steps below:
     ```
     The `pwd` command will print the absolute path to the terminal. Copy this path.
 
+- Go back to the directory of the repository, and start visual studio code:
+  ```bash
+    cd ~/AE4353-Y24
+    code .
+    ```
+  You will see the files in the repository. 
+
 - Modify the `.devcontainer/devcontainer.json` file:
 	- Open the `.devcontainer/devcontainer.json` file.
 	- Locate the "mounts" section.
