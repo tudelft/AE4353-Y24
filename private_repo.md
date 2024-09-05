@@ -2,7 +2,7 @@ You might want to create a private personal repo to push your code written for t
 
  1. Clone this repository. For Windows users, please do the clone in WSL2!
     ```bash
-    git clone git@github.com:tudelft/AE4353-Y24.git <your-desired-directory>
+    git clone git@github.com:tudelft/AE4353-Y24.git
     ```
 
  2. [Create a new private repository on Github](https://help.github.com/articles/creating-a-new-repository/) and name it as you like: <personal-repo-name>.
@@ -11,7 +11,7 @@ You might want to create a private personal repo to push your code written for t
 
  3. Rename the old URL and add the personal repo URL as an upstream. Disable pushing to the public repo for which you do not have push access.
     ```bash
-    cd <your-desired-directory>
+    cd AE4353-Y24
     git remote rename origin upstream
     git remote add origin git@github.com:<your_username>/<personal-repo-name>.git
     git remote set-url --push upstream DISABLE
