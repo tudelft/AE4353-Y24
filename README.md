@@ -136,6 +136,8 @@ To get started with this project on Linux (Ubuntu), follow the steps below:
     sudo apt-get update
     ```
 
+    > ⚠️ If the above code block execution failed, try to execute the commands one line at a time.
+
     c. Install the Docker packages:
     ```bash
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin     
