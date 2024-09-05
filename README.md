@@ -183,6 +183,10 @@ Well done! Your setup on MacOS is complete, and you are ready to start working o
 ## Usage
 To use this project, follow the steps below:
 
+> 💡 Windows users should do the steps 0-2 in WSL2.
+
+0. If you do not have a ssh key under `$HOME/.git`, follow the [steps](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to create a key pair and upload to Github.
+
 1. Ensure your Git credentials are available in DevContainers by configuring them according to the guidelines provided [here](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials#_using-ssh-keys). This will allow seamless access to repositories without repeated authentication prompts while working inside DevContainers.
    
 2. Clone the repository and create a private mirror by following the steps outlined [here](private_repo.md). This will help you set up a secure, private copy of the repository for your use.
