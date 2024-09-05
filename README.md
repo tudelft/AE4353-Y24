@@ -200,6 +200,7 @@ To use this project, follow the steps below:
     ```bash
     cd ~/Downloads
     ```
+    > ⚠️ For MacOS users, avoid putting the dataset folder in `Desktop` or `Documents` if you have iCloud Drive '[Sync this Mac](https://support.apple.com/en-us/109344)' on.
 
     On WSL, we recommend the home folder:
     ```bash
