@@ -1,5 +1,5 @@
 trajectory_dim: 3
-dataset_file: data/3D_QUAD_HOVER.npz
+dataset_file: /workspaces/AE4353-Y24/data/3D_QUAD_HOVER.npz
 
 batchsize_train: 256
 batchsize_val: 4096
