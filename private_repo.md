@@ -2,6 +2,7 @@ You might want to create a private personal repo to push your code written for t
 
  1. Clone this repository. For Windows users, please do the clone in WSL2!
     ```bash
+    cd ~
     git clone git@github.com:tudelft/AE4353-Y24.git
     ```
 
