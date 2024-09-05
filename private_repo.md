@@ -8,9 +8,12 @@ You might want to create a private personal repo to push your code written for t
 
       > ⚠️ For MacOS users, avoid cloning the repository under `Desktop` or `Documents` if you have iCloud Drive '[Sync this Mac](https://support.apple.com/en-us/109344)' on. If you must, rename the cloned folder name to `AE4353-Y24.nosync`.
 
- 2. [Create a new private repository on Github](https://help.github.com/articles/creating-a-new-repository/) and name it as you like: <personal-repo-name>.
+ 2. [Create a new private repository on Github](https://help.github.com/articles/creating-a-new-repository/) and name it as you like: `<personal-repo-name>`.
+    > ⚠️ When creating the repository, do ***NOT*** select "Add a README file" and make sure .gitignore template and License are both selected to None.
+
     > If you are unable to create a private repo, you can request unlimited private repos as a student by getting
     > the [student pack](https://education.github.com/pack) from Github.
+   
 
  3. Rename the old URL and add the personal repo URL as an upstream. Disable pushing to the public repo for which you do not have push access.
     ```bash
