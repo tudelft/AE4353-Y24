@@ -192,23 +192,38 @@ To use this project, follow the steps below:
 2. Clone the repository and create a private mirror by following the steps outlined [here](private_repo.md). This will help you set up a secure, private copy of the repository for your use.
 
 3. Set up a dataset folder by following these steps:
+- `cd` into a directory to host the dataset folder.
 
-- Create a dataset folder outside the cloned repository by running the following command. Replace `<dataset_folder_parent_directory>` and `<dataset_folder_name>` with your desired path and folder name:
+    On Linux/MacOS we recommend the `Downloads` folder:
+    ```bash
+    cd ~/Downloads
+    ```
+
+    On WSL, we recommend the home folder:
+    ```bash
+    cd ~
+    ```
+- Create a dataset folder at the directory:
    ```bash
-   mkdir <dataset_folder_parent_directory>/<dataset_folder_name>
+   mkdir ae4353_dataset
    ```
+
+- Navigate to the `ae4353_dataset` directory and copy the output of the pwd command into your clipboard:
+    ```bash
+    cd ae4353_dataset
+    pwd
+    ```
+    The `pwd` command will print the absolute path to the terminal. Copy this path.
 
 - Modify the `.devcontainer/devcontainer.json` file:
 	- Open the `.devcontainer/devcontainer.json` file.
 	- Locate the "mounts" section.
 	- Uncomment the line under the "mounts" section.
-	- Replace `<your-external-data-directory>` with your dataset folder path `<dataset_folder_parent_directory>/<dataset_folder_name>`.
+	- Replace `<your-external-data-directory>` with the absolute path you copied from the `pwd` command.
  
-    > 💡 Note `<your-external-data-directory>` needs to be written in absolute path. (e.g. `/home/<user-name>/downloads/`)
-    > 
     > 💡 Make sure there is at least 10GB of free space available to host the datasets.
     > 
-    > 💡 For WSL2 users, if you want to create the dataset folder within WSL2, you can access your WSL2 files through File Explorer in Windows and enter `\\wsl$` in the address bar. Navigate to `Ubuntu-<version>\home\<your-username>` (replace `<version>` with your WSL2 distribution version and `<your-username>` with your Linux username).
+    > 💡 For WSL2 users, if you create the dataset folder within WSL2, you can access your WSL2 files through File Explorer in Windows and enter `\\wsl$` in the address bar. Navigate to `Ubuntu-<version>\home\<your-username>` (replace `<version>` with your WSL2 distribution version and `<your-username>` with your Linux username).
     >
     > 💡 For WSL2 users, if you want to create the dataset directory outside WSL2 and in your Windows file space, you can access it under the path `/mnt/<disk>/` within WSL2. An example of `<your-external-data-directory>` could be `/mnt/c/Users/Downloads/Dataset_Folder`.
 
