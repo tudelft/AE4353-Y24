@@ -1,5 +1,5 @@
 trajectory_dim: 2
-dataset_file: /workspaces/msc-ai-course/data/2D_QUAD_HOVER.npz
+dataset_file: data/2D_QUAD_HOVER.npz
 
 batchsize_train: 1024
 batchsize_val: 4096
