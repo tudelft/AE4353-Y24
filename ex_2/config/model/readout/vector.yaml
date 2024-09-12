@@ -1,0 +1,4 @@
+readout: vector
+
+defaults:
+  - base

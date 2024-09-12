@@ -1,0 +1,34 @@
+epochs: 50
+
+demo:
+  param_group_1:
+    param_1: 'a'
+    param_2: 123
+  param_group_2:
+    param_1: 'b'
+    param_2: 456
+
+dataloader:
+  _target_: torch.utils.data.DataLoader
+  _partial_: true
+  batch_size: 32
+  shuffle: true
+  num_workers: 0
+
+model:
+  _target_: ex_2.model.PolarSunNet
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 1.0
+
+defaults:
+  - _self_
+  - dataset: real_dataset
+  - model/backbone: vanilla # resnet, vanilla
+  - model/representation: raw # raw, IQU, DOP+AOP, IQU+DOP+AOP
+  - model/readout: angle # angle, vector
+  # use mse loss when readout as angle, use l_norm loss when readout as vector
+  - loss: mse # mse, l_norm
+  - optional lr@optimizer: ${model/backbone}_${model/representation}_${model/readout}

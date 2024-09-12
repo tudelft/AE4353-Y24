@@ -1,0 +1,1 @@
+lr: 1e-5 # tune your learning rate and save the optimal one here

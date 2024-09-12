@@ -1,0 +1,4 @@
+readout: angle
+
+defaults:
+  - base

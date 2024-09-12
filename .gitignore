@@ -1,3 +1,7 @@
+# tensorboard logs
+*/runs/
+
+
 # data folder
 data/*
 !data/.gitkeep

@@ -45,6 +45,7 @@
                 "ms-python.vscode-pylance",
                 "ms-python.black-formatter",
                 "ms-toolsai.jupyter",
+                "ms-toolsai.tensorboard",
                 "github.copilot",
                 "github.copilot-chat"
             ]
