@@ -55,6 +55,12 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 COPY env.yml /tmp/conda-tmp/
 RUN conda env create -f /tmp/conda-tmp/env.yml && rm -rf /tmp/conda-tmp
 
+RUN if [ "$(uname -m)" = "aarch64" ]; then \
+    echo "Running on ARM architecture"; \
+    # Replace OpenBLAS with the version with OpenMP support on ARM systems
+    # AMD64 systems use the libBLAS with MKL which is installed by default
+    conda install -n AE4353 -c conda-forge libopenblas=*=openmp_* -y; \
+fi
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
