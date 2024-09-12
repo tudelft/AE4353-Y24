@@ -7,6 +7,7 @@
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [GitHub Copilot](#github-copilot)
+    - [Remote Development](#remote-development)
     - [Windows](#windows)
     - [Linux (Ubuntu)](#linux-ubuntu)
     - [MacOS](#macos)
@@ -24,7 +25,7 @@ To get started, please refer to this README file for detailed instructions and g
 
 
 ## Getting Started
-Welcome to the setup guide! This section will cover the prerequisites, including setting up GitHub Copilot, and provide step-by-step instructions for configuring your development environment on Windows, Linux (Ubuntu), or MacOS. Follow the guidelines for your operating system to ensure you have all the necessary tools and configurations. Once your setup is complete, proceed to the [Usage](#usage) section to begin working with the project.
+Welcome to the setup guide! This section will cover the prerequisites, including setting up GitHub Copilot, and provide step-by-step instructions for configuring your development environment. You can choose to set up your environment either remotely using GitHub Codespaces or Google Colab, or locally on Windows, Linux (Ubuntu), or MacOS. Follow the guidelines for your operating system to ensure you have all the necessary tools and configurations. Once your setup is complete, proceed to the [Usage](#usage) section to begin working with the project.
 
 ### Prerequisites
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -37,6 +38,13 @@ GitHub Copilot is an AI-powered assistant that helps you write code faster and m
 If you do not have it yet, please sign up for the Student Developer Pack on GitHub using this [link](https://education.github.com/pack). Once you have signed up, wait for GitHub to authenticate your request. Once authenticated, you will have access to GitHub Copilot.
 
 If you already have access to GitHub Copilot, it comes pre-installed when you open the devcontainer. Simply log in with your GitHub account and you can start using GitHub Copilot in Visual Studio Code.
+
+### Remote Development
+For those who prefer or need a cloud-based development environment, we are pleased to offer a comprehensive guide for setting up and using GitHub Codespaces. This platform allows you to work remotely without the need to install software locally. You can find detailed instructions [here](codespaces_guide.md).
+
+> ⚠️ For GitHub Codespaces, it is _**highly**_ advisable to have a GitHub Pro account, which can be obtained by signing up for the [Student Developer Pack](https://education.github.com/pack). Without this account, you may incur charges for usage. With a GitHub Pro account, you are entitled to up to 90 hours of usage per month with a 2-core setup and 20 GB of storage at no additional cost. Please note that any usage beyond these limits will result in extra fees, so we recommend monitoring your usage carefully.
+>
+> 💡 You may safely disregard the [Usage](#usage) section in this README, as the guide includes its own detailed usage instructions.
 
 ### Windows
 To get started with this project on Windows, follow the steps below:
