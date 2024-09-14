@@ -277,7 +277,7 @@ To use this project, follow the steps below:
    - **Configuring SSH Keys:** Make sure your SSH keys are correctly set up on your local machine.
    - **Sharing SSH Keys with DevContainers:** The guide explains how to forward your local SSH agent to the DevContainer, allowing the DevContainer to use your local SSH keys.
 
-   By following these steps, you will be able to push changes to your repositories without encountering a `git@github.com: Permission denied (publickey)` error when using the `git push origin` command in the Visual Studio Code terminal inside the container. Properly configuring your Git credentials ensures smooth and uninterrupted access to your repositories without needing to repeatedly authenticate.
+   By following these steps, you will be able to push changes to your repositories without encountering a `git@github.com: Permission denied (publickey)` error when using the `git push origin` command in the Visual Studio Code terminal inside the container. Properly configuring your Git credentials ensures smooth and uninterrupted access to your repository without needing to repeatedly authenticate/create and add an SSH Key.
 
     > ⚠️ Windows users should use the **Ubuntu** terminal for this and follow the instructions for Linux.
 
