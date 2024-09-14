@@ -281,7 +281,7 @@ To use this project, follow the steps below:
 
     > ⚠️ Windows users should use the **Ubuntu** terminal for this and follow the instructions for Linux.
 
-    > 💡 **Note:** If you followed the guide for setting up your SSH key in the [Windows](#windows) section, your `<your ssh key>` will be `id_rsa`.
+    > 💡 **Note:** If you followed the guide for setting up your SSH Key in the [Windows](#windows) section, your `<your ssh key>` will be `id_rsa`.
 
 
 3. Clone the public `AE4353-Y24` repository and create a private version for your use by following the steps outlined [here](private_repo.md).
