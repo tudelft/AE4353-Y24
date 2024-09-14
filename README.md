@@ -104,7 +104,7 @@ To get started with this project on Windows, follow the steps below:
 
 4. Follow the [post-installation steps](https://docs.docker.com/engine/install/linux-postinstall/) for Docker Engine to set the necessary permissions for running Docker on Visual Studio Code. 
 
-5. If you're setting up WSL2 with Ubuntu for the first time, follow these steps to install Git and configure SSH:
+5. If you're setting up WSL2 with Ubuntu for the first time, follow these steps to install Git and configure SSH using the **Ubuntu** terminal:
 
     a. **Install Git:**
     - Follow these [instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) in the "Installing on Linux" section to install Git on Ubuntu.
@@ -268,11 +268,26 @@ Well done! Your setup on MacOS is complete, and you are ready to start working o
 
 ## Usage
 To use this project, follow the steps below:
+
+1. If you haven't already created and added an SSH key, please follow the instructions starting from Step 5b in the [Windows](#windows) section for detailed guidance on how to do so.
+    > ⚠️ Windows users should use the **Ubuntu** terminal for these steps.
+
+2. Ensure your Git credentials are set up correctly for use in DevContainers by following the guidelines provided [here](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials). This process includes:
+
+   - **Configuring SSH Keys:** Make sure your SSH keys are correctly set up on your local machine.
+   - **Sharing SSH Keys with DevContainers:** The guide explains how to forward your local SSH agent to the DevContainer, allowing the DevContainer to use your local SSH keys.
+
+   By following these steps, you will be able to push changes to your repositories without encountering a `git@github.com: Permission denied (publickey)` error when using the `git push origin` command in the Visual Studio Code terminal inside the container. Properly configuring your Git credentials ensures smooth and uninterrupted access to your repositories without needing to repeatedly authenticate.
+
+    > ⚠️ Windows users should use the **Ubuntu** terminal for this and follow the instructions for Linux.
+
+    > 💡 **Note:** If you followed the guide for setting up your SSH key in the [Windows](#windows) section, your `<your ssh key>` will be `id_rsa`.
+
+
+3. Clone the public `AE4353-Y24` repository and create a private version for your use by following the steps outlined [here](private_repo.md).
+	> ⚠️ Windows users should use the **Ubuntu** terminal for this.
    
-1. Clone the public `AE4353-Y24` repository and create a private version for your use by following the steps outlined [here](private_repo.md).
-	> ⚠️ **For Windows users:** Use the **Ubuntu** terminal for this.
-   
-2. Set up and mount a dataset folder by following these steps:
+4. Set up and mount a dataset folder by following these steps:
 
 	a. `cd` into a directory to host the dataset folder.
 
@@ -305,13 +320,15 @@ To use this project, follow the steps below:
 
    	Copy this path.
 
-   	d. Go back to the directory of the repository and start Visual Studio Code:
+   	d. Open Visual Studio Code and select "File -> Open Folder" to choose the repository folder.
 
+	  Alternatively, on Windows/Linux, you can navigate to the repository directory in your **Ubuntu** terminal and start Visual Studio Code with the following commands:
+		
 	```bash
 	cd ~/AE4353-Y24
 	code .
 	```
-
+ 
    	e. Find the `.devcontainer/devcontainer.json` file and modify it as follows:
 	
  	1. Open the `.devcontainer/devcontainer.json` file.
@@ -325,19 +342,22 @@ To use this project, follow the steps below:
 
  	f. Close Visual Studio Code.
 
-3. Download the required dataset(s) for the exercise/competition from [SurfDrive](https://surfdrive.surf.nl/files/index.php/s/QzvOHJx2o4KIESI) and move the file(s) to the above dataset folder.
+5. Download the required dataset(s) for the exercise/competition from [SurfDrive](https://surfdrive.surf.nl/files/index.php/s/QzvOHJx2o4KIESI) and move the file(s) to the above dataset folder.
 	> ⚠️ Unzip the `AE4353-Datasets-2024.zip` file and move its contents into the `ae4353_dataset` folder that you created earlier.
 
-4. **(Optional)** If your machine has a CUDA-enabled GPU and you want to use it within the devcontainer, follow the instructions in the [CUDA Guide](cuda_guide.md) to set up GPU support. Enabling GPU support can speed up training times from hours to minutes, making your deep learning work a lot quicker!
+6. **(Optional)** If your machine has a CUDA-enabled GPU and you want to use it within the devcontainer, follow the instructions in the [CUDA Guide](cuda_guide.md) to set up GPU support. Enabling GPU support can speed up training times from hours to minutes, making your deep learning work a lot quicker!
 
-5. **Open Visual Studio Code and Set Up the Development Environment:**
+7. **Open Visual Studio Code and Set Up the Development Environment:**
 
-	a. Navigate to the repository folder and open Visual Studio Code using the terminal (for WSL2 users, use the **Ubuntu** terminal):
-	
-	  ```bash
-	  cd AE4353-Y24
-	  code .
-	 ```
+	a. Open Visual Studio Code and select "File -> Open Folder" to choose the repository folder.
+		
+	Alternatively, on Windows/Linux, you can navigate to the repository directory in your **Ubuntu** terminal and start Visual Studio Code with the following commands:
+					
+	```bash
+	cd ~/AE4353-Y24
+	code .
+	```
+ 
 	> ⚠️ **For WSL2 Users:** After opening Visual Studio Code, make sure you are connected to the WSL2 backend:
 	>
 	> - Press `Ctrl+Shift+P` to open the Command Palette.
@@ -358,7 +378,7 @@ To use this project, follow the steps below:
 	c. Once your development environment has finished building, you can confirm its functionality by opening a Jupyter notebook (`.ipynb`) of your choice (e.g., `ex_1.ipynb`). Click on `Select Kernel` in the top right corner of the notebook, then select `Python Environments`. Check that the kernel listed starts with the prefix `AE4353` to ensure your environment is configured properly. If the kernel is correctly prefixed, your development environment has been set up successfully!
 
 
-6. **Save, Commit, and Push Your Work:**
+8. **Save, Commit, and Push Your Work:**
 
 	Always save your work locally (using `Ctrl+S`). When you finish your session, commit and push your changes to your private repository to ensure your work is backed up on GitHub. To do this, use the **Visual Studio Code (devcontainer) terminal** and follow these steps:
 
@@ -384,7 +404,7 @@ To use this project, follow the steps below:
       git push origin
       ```
 
-   	> 💡 **Troubleshooting Tip:** If you encounter a "permission denied" error when running `git push origin`, you may need to create a new SSH key in the Visual Studio Code (devcontainer) terminal. For detailed instructions, refer to step 5b onwards in the [Windows](#windows) section.
+	> 💡 **Troubleshooting Tip:** If you encounter a "permission denied" error while running `git push origin`, you may need to revisit Step 2 and ensure that your Git credentials are correctly forwarded to the DevContainer.
 	
 	> 💡 Visual Studio Code may prompt you to configure your Git username and email. If prompted, you can follow the instructions to enter the following commands in the terminal:
 	>
