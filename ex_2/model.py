@@ -111,7 +111,7 @@ def get_readout_layer(readout, **kwargs):
         out_features = 1
 
         def get_angle(x):
-            return torch.rad2deg(x)
+            return torch.rad2deg(x).squeeze(1)
 
     elif readout == "vector":
         out_features = 2
