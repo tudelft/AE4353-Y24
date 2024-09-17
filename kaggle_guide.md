@@ -8,7 +8,7 @@ We hope you find this guide helpful! Follow the steps below to get started with 
 ## Prerequisites
 Before you start, make sure you have:
 
-1. **Your personal private `AE4354-Y24` Repository**: Clone the repository and create a private version by following the steps outlined [here](private_repo.md) if you have not yet done so.
+1. **Your Personal Private `AE4354-Y24` Repository**: Clone the repository and create a private version by following the steps outlined [here](private_repo.md), if you have not done so already.
 
 2. **A GitHub Personal Access Token**: You’ll need a personal access token to use GitHub with Kaggle. Follow the instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) to create one.
 
