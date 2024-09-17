@@ -40,11 +40,20 @@ If you do not have it yet, please sign up for the Student Developer Pack on GitH
 If you already have access to GitHub Copilot, it comes pre-installed when you open the devcontainer. Simply log in with your GitHub account and you can start using GitHub Copilot in Visual Studio Code.
 
 ### Remote Development
-For those who prefer or need a cloud-based development environment, we are pleased to offer a comprehensive guide for setting up and using GitHub Codespaces. This platform allows you to work remotely without the need to install software locally. You can find detailed instructions [here](codespaces_guide.md).
+For those who prefer or need a cloud-based development environment, we are pleased to offer guides for GitHub Codespaces and Kaggle. These platforms let you work remotely without needing local software installations.
+
+- **GitHub Codespaces**: Easy to set up and user-friendly, offering free (limited) access to a CPU instance. It’s great for general coding but does not provide GPU/TPU access.
+
+- **Kaggle**: Slightly more complex to set up but provides free (limited) access to GPUs and TPUs. This is especially useful for faster training if you don’t have a CUDA-enabled GPU on your laptop.
+
+For detailed instructions, please refer to the guides below:
+
+- [GitHub Codespaces Guide](codespaces_guide.md)
+- [Kaggle Guide](kaggle_guide.md)
 
 > ⚠️ For GitHub Codespaces, it is _**highly**_ advisable to have a GitHub Pro account, which can be obtained by signing up for the [Student Developer Pack](https://education.github.com/pack). Without this account, you may incur charges for usage. With a GitHub Pro account, you are entitled to up to 90 hours of usage per month with a 2-core setup and 20 GB of storage at no additional cost. Please note that any usage beyond these limits will result in extra fees, so we recommend monitoring your usage carefully.
-
-> 💡 You may safely disregard the [Usage](#usage) section in this README, as the guide includes its own detailed usage instructions.
+>
+> 💡 You may safely disregard the [Usage](#usage) section in this README, as the remote development guides include their own detailed usage instructions.
 
 ### Windows
 To get started with this project on Windows, follow the steps below:
