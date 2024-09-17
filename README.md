@@ -283,6 +283,7 @@ To use this project, follow the steps below:
 
     > 💡 **Note:** If you followed the guide for setting up your SSH Key in the [Windows](#windows) section, your `<your ssh key>` will be `id_rsa`.
 
+    > ⚠️ Mac users should follow the instructions under the Linux section in the [steps](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials).
 
 3. Clone the public `AE4353-Y24` repository and create a private version for your use by following the steps outlined [here](private_repo.md).
 	> ⚠️ Windows users should use the **Ubuntu** terminal for this.
