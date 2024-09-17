@@ -8,11 +8,9 @@ We hope you find this guide helpful! Follow the steps below to get started with 
 ## Prerequisites
 Before you start, make sure you have:
 
-1. **A GitHub Account**: You need a GitHub account to access and clone repositories. If you don’t have one, sign up for free [here](https://github.com/).
+1. **Your personal private `AE4354-Y24` Repository**: Clone the repository and create a private version by following the steps outlined [here](private_repo.md) if you have not yet done so.
 
-2. **A Private Version of the `AE4354-Y24` Repository**: Clone the repository and create a private version by following the steps outlined [here](private_repo.md). This will give you a secure, private copy of the repository.
-
-3. **A GitHub Personal Access Token**: You’ll need a personal access token to use GitHub with Kaggle. Follow the instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) to create one.
+2. **A GitHub Personal Access Token**: You’ll need a personal access token to use GitHub with Kaggle. Follow the instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) to create one.
 
 ## Getting Started
 Follow these steps to set up Kaggle and start coding:
@@ -63,13 +61,13 @@ To work with the dataset in your Kaggle notebook, follow these steps:
    - When you’re ready to run your training, switch to `GPU P100` to speed up the process.
    - To switch, go to the `Settings` bar, select `Accelerator`, and choose `GPU P100`.
 
-> 💡 Kaggle offers 12 hours of CPU and GPU notebook usage, 9 hours for TPU usage, and 20 GB of auto-saved disk space under `/kaggle/working`. Use CPU for setup and GPU for training to make the most of your usage quota. For more details on Kaggle’s GPU usage limits, see the [Kaggle Documentation](https://www.kaggle.com/docs/notebooks#accelerators).
+> 💡 After switching the accelerator, the runtime of the notebook will be restarted. You would need to re-execute the entire notebook from the beginning.
 
-## Managing Kaggle and Debugging
+> 💡 Kaggle offers unlimited hours of CPU usage, 30 hours per week GPU usage, and 20 GB of auto-saved disk space under `/kaggle/working`. Use CPU for setup and GPU for training to make the most of your usage quota. For more details on Kaggle’s GPU usage limits, see the [Kaggle Documentation](https://www.kaggle.com/docs/notebooks#accelerators). Ensure you monitor your resource usage to avoid hitting limits and budget the resource usage wisely among working on exercises and the competition.
 
-- **Managing Sessions**: Ensure that you save your work frequently and monitor your resource usage to avoid hitting limits.
-- **Debugging**:
-  - **Kernel Crashes**: Restart the kernel by going to the `Run` dropdown and clicking `Factory reset`.
-  - **Dataset Not Found**: Use the command `!ls /kaggle/input` to list available datasets and adjust your paths accordingly. See the notebooks for further details.
+## Common errors
+
+- **Kernel Crashes**: Restart the kernel by going to the `Run` dropdown and clicking `Factory reset`.
+- **Dataset Not Found**: Use the command `!ls /kaggle/input` to list available datasets and adjust your paths accordingly. See the notebooks for further details.
 
 Well done! Your Kaggle setup is complete, and you are ready to start working on the project. Follow the instructions in your notebook to proceed.
