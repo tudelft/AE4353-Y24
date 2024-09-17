@@ -17,7 +17,9 @@ Follow these steps to set up Kaggle and start coding:
 
 ### Step 1: Sign Up with Kaggle
 1. Go to the [Kaggle website](https://www.kaggle.com/).
-2. Click on "Sign Up" and follow the instructions to create your account.
+2. Click on "Sign Up" and follow the instructions to create your account ***`with your TUDelft email`***.
+
+> ⚠️ Your Kaggle account must be associated with your TU Delft email address in order to join the course competition, which is exclusive to TU Delft students.
 
 ### Step 2: Import a Notebook into Kaggle
 1. **Download Your Notebook**:
