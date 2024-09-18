@@ -67,8 +67,7 @@ To work with the dataset in your Kaggle notebook, follow these steps:
 
 > 💡 Kaggle offers unlimited hours of CPU usage, 30 hours per week GPU usage, and 20 GB of auto-saved disk space under `/kaggle/working`. Use CPU for setup and GPU for training to make the most of your usage quota. For more details on Kaggle’s GPU usage limits, see the [Kaggle Documentation](https://www.kaggle.com/docs/notebooks#accelerators). Ensure you monitor your resource usage to avoid hitting limits and budget the resource usage wisely among working on exercises and the competition.
 
-## Common errors
-
+## Common Errors
 - **Kernel Crashes**: Restart the kernel by going to the `Run` dropdown and clicking `Factory reset`.
 - **Dataset Not Found**: Use the command `!ls /kaggle/input` to list available datasets and adjust your paths accordingly. See the notebooks for further details.
 
