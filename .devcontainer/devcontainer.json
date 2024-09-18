@@ -8,19 +8,7 @@
         // Bind mount data here if necessary e.g.
         //"source=<your-external-data-directory>,target=${containerWorkspaceFolder}/data,type=bind"
     ],
-    "features": {
-        "ghcr.io/devcontainers/features/common-utils:2": {
-            "installZsh": "true",
-            "username": "vscode",
-            "userUid": "1000",
-            "userGid": "1000",
-            "upgradePackages": "true"
-        },
-        "ghcr.io/devcontainers/features/git:1": {
-            "version": "latest",
-            "ppa": "false"
-        }
-    },
+    "features": {},
     "customizations": {
         // Configure properties specific to VS Code.
         "vscode": {
