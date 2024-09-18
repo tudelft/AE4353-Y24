@@ -47,12 +47,10 @@ Follow these steps to set up your GitHub Codespace and start coding:
    >
    > 💡 **If an error window appears indicating that your environment is not configured correctly and is running in recovery mode, please delete the Codespace instance you created and try creating a new 2-core instance using the steps above.** If the issue persists, continue this process until you successfully configure a 2-core setup. Usually, this resolves after one or two attempts.
 
-6. **Create and Add an SSH Key:** To create and add an SSH key in the GitHub Codespaces (Visual Studio Code) terminal, follow the instructions starting from Step 5bii in the Windows section of the [README](README.md) for detailed guidance.
-
-7. **Configure Your Repository’s Settings:**
+6. **Configure Your Repository’s Settings:**
    1. Add the public repository as `upstream` to track changes from it while disabling push access to prevent accidental updates to it:
       ```bash
-      git remote add upstream git@github.com:tudelft/AE4353-Y24.git
+      git remote add upstream https://github.com/tudelft/AE4353-Y24.git
       git remote set-url --push upstream DISABLE
       ```
    
