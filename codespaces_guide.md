@@ -81,7 +81,18 @@ To use your configured GitHub Codespace, please follow the steps below:
     >
     > 💡 Uploading the file may take a few minutes. You can monitor the progress in the bar at the bottom.
 
-3. When you have finished using your Codespace, please ensure that you stop it to avoid unnecessary usage and costs. For more details on how to manage your Codespace, refer to the [Managing Your Codespace](#managing-your-codespace) section.
+3. After you finish working in your Codespace, make sure to commit and push your changes. Then, stop your Codespace to avoid unnecessary usage and costs. For detailed instructions on managing your Codespace, refer to the [Managing Your Codespace](#managing-your-codespace) section.
+
+   > ⚠️ **Important:** Always commit and push your changes after each session to avoid losing your work. Use the following commands:
+   > 
+   > ```bash
+   > git status
+   > git add .
+   > git commit -m "<your-message-here>"
+   > git push
+   > ```
+   > 
+   > Keeping your work saved and up-to-date ensures that nothing is lost and everyone stays happy!
 
 Good job! You are now ready to start working on the project using the pre-configured environment in your GitHub Codespace. Happy coding! 🚀
 
