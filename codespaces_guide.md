@@ -16,12 +16,12 @@ Before you start, make sure you have:
 
 3. **Your Personal Private `AE4353-Y24` Repository**: If you haven’t already created a private version of the `tudelft/AE4353-Y24` repository, follow these steps. Note that if you’ve already created a private repository, you do not need to create a new one specifically for Codespaces:
 
-     - Go to GitHub and create a new repository.
-     - Click on the `Import repository` option at the top of the page.
-     - Paste the URL of the public repository: `https://github.com/tudelft/AE4353-Y24`.
-     - Select `Private` at the bottom and name the repository `AE4353-Y24`.
+   1. Go to GitHub and create a new repository.
+   2. Click on the `Import repository` option at the top of the page.
+   3. Paste the URL of the public repository: `https://github.com/tudelft/AE4353-Y24`.
+   4. Select `Private` at the bottom and name the repository `AE4353-Y24`.
    
-      After completing these steps, you will have a private copy of the `tudelft/AE4353-Y24` repository under your GitHub username as `<your_username>/AE4353-Y24`.
+   After completing these steps, you will have a private copy of the `tudelft/AE4353-Y24` repository under your GitHub username as `<your_username>/AE4353-Y24`.
 
 ## Getting Started
 Follow these steps to set up your GitHub Codespace and start coding:
@@ -50,34 +50,23 @@ Follow these steps to set up your GitHub Codespace and start coding:
 6. **Create and Add an SSH Key:** To create and add an SSH key in the GitHub Codespaces (Visual Studio Code) terminal, follow the instructions starting from Step 5bii in the Windows section of the [README](README.md) for detailed guidance.
 
 7. **Configure Your Repository’s Settings:**
-   1. Update your repository’s remote settings:
+   1. Add the public repository as `upstream` to track changes from it while disabling push access to prevent accidental updates to it:
       ```bash
-      git remote rename origin upstream                                              # Rename the existing 'origin' remote to 'upstream'
-      git remote add origin git@github.com:<your_username>/<personal-repo-name>.git  # Add your new private repository as 'origin'
-      git remote set-url --push upstream DISABLE                                     # Disable push access to the public repository
+      git remote add upstream git@github.com:tudelft/AE4353-Y24.git
+      git remote set-url --push upstream DISABLE
       ```
-      This configuration allows you to push changes to your private repository while maintaining a reference to the public repository. By renaming the original remote and adding your personal repo as the new `origin`, you ensure that your work is kept private and secure, while still being able to fetch updates from the public repository.
-
-   2. Push to your new repository:
-       ```bash
-       git push origin
-       ```  
-     
-   3. Set the `origin` as the default push destination.
-       ```bash
-       git branch --set-upstream-to=origin/main
-       ```
-
-       This command configures your local `main` branch to push changes to your private repository by default. It ensures that when you use `git push`, your commits will be sent to your private repo instead of the public one.
-
-   Later, if there are new commits in the public repository (`tudelft/AE4353-Y24`), you can incorporate these changes into your private repository by pulling from the `upstream` and rebasing your work on top of it:
    
-   ```bash
-   git fetch upstream
-   git rebase upstream/main
-   ```
-   If there are any conflicts during the rebase, resolve them as needed. This process ensures your private repository stays up-to-date with the public repository while maintaining your own changes.
-
+   2. Update your private repository with changes from the public repository:
+      - If there are new commits in the public repository, you can fetch them:
+      ```bash
+       git fetch upstream
+      ```
+      - Rebase your work on top of the latest changes from the public repository:
+      ```bash
+      git rebase upstream/main
+      ```
+   
+      - If there are any merge conflicts, resolve them as needed. This ensures your private repository remains up-to-date while maintaining your own changes.
 
 Well done! Your GitHub Codespaces setup is complete, and you are ready to start working on the project. Next, proceed to the [Usage](#usage) section to learn how to run the code.
 
