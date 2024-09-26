@@ -1,0 +1,23 @@
+name: mnist
+max_epochs: 10
+lr: 1e-4
+
+train_loader:
+  _target_: torch.utils.data.DataLoader
+  _partial_: true
+  batch_size: 64
+  shuffle: true
+  num_workers: 0
+
+val_loader:
+  _target_: torch.utils.data.DataLoader
+  _partial_: true
+  batch_size: 64
+  shuffle: false
+  num_workers: 0
+
+defaults:
+  - _self_
+  - optional dataset: mnist
+  - optional arch: ae # ae, vae
+  - model: ${arch}_${dataset}

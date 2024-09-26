@@ -1,0 +1,9 @@
+_target_:  ex_4.vae.BaseAE
+latent_dim: 4
+encoder:
+  _target_: ex_4.model.EncoderResNetVAE
+  latent_dim: ${..latent_dim}
+decoder:
+  _target_: ex_4.model.DecoderResNetVAE
+  channel_out: 1
+  latent_dim: ${..latent_dim}
