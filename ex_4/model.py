@@ -65,7 +65,9 @@ class DecoderResNetVAE(nn.Module):
 
         self.projection_layer = nn.Linear(self.latent_dim, 128 * bottleneck_size)
 
-        # TODO: Create the upsampling layers undo the transformation done by the encoder
+        # TODO: Create the upsampling layers which undo the transformation done by the encoder
+        # https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md is a good resource
+        # for understanding how to calculate the output shape of the transposed convolution
         # Reminder: Add a sigmoid layer at the end to ensure the output is between 0 and 1
         self.upsampling = nn.Identity()
 
