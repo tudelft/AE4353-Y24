@@ -53,6 +53,7 @@ To work with the dataset in your Kaggle notebook, follow these steps:
      1. Click on `Add Input`.
      2. In the search bar, paste the corresponding URL:
        - For Exercise 2: [https://www.kaggle.com/datasets/dnaylw/polarization](https://www.kaggle.com/datasets/dnaylw/polarization).
+       - For Exercise 4: [https://www.kaggle.com/datasets/jessicali9530/celeba-dataset/](https://www.kaggle.com/datasets/jessicali9530/celeba-dataset/).
      3. Select the dataset from the search results and add it to your notebook.
 
 ### Step 4: Switching Between CPU and GPU
