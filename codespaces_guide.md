@@ -47,24 +47,12 @@ Follow these steps to set up your GitHub Codespace and start coding:
    >
    > 💡 **If an error window appears indicating that your environment is not configured correctly and is running in recovery mode, please delete the Codespace instance you created and try creating a new 2-core instance using the steps above.** If the issue persists, continue this process until you successfully configure a 2-core setup. Usually, this resolves after one or two attempts.
 
-6. **Configure Your Repository’s Settings:**
-   1. Add the public repository as `upstream` to track changes from it while disabling push access to prevent accidental updates to it:
-      ```bash
-      git remote add upstream https://github.com/tudelft/AE4353-Y24.git
-      git remote set-url --push upstream DISABLE
-      ```
-   
-   2. Update your private repository with changes from the public repository:
-      - If there are new commits in the public repository, you can fetch them:
-      ```bash
-       git fetch upstream
-      ```
-      - Rebase your work on top of the latest changes from the public repository:
-      ```bash
-      git rebase upstream/main
-      ```
-   
-      - If there are any merge conflicts, resolve them as needed. This ensures your private repository remains up-to-date while maintaining your own changes.
+6. Add the public repository as `upstream` to track changes from it while disabling push access to prevent accidental updates to it:
+
+   ```bash
+   git remote add upstream https://github.com/tudelft/AE4353-Y24.git
+   git remote set-url --push upstream DISABLE
+   ```
 
 Well done! Your GitHub Codespaces setup is complete, and you are ready to start working on the project. Next, proceed to the [Usage](#usage) section to learn how to run the code.
 
@@ -81,7 +69,7 @@ To use your configured GitHub Codespace, please follow the steps below:
 
 3. After you finish working in your Codespace, make sure to commit and push your changes. Then, stop your Codespace to avoid unnecessary usage and costs. For detailed instructions on managing your Codespace, refer to the [Managing Your Codespace](#managing-your-codespace) section.
 
-   > ⚠️ **Important:** Always commit and push your changes after each session to avoid losing your work. Use the following commands:
+   > ⚠️ **Important:** Always commit and push your changes after each session to avoid losing your work. Use the following commands in the terminal:
    > 
    > ```bash
    > git status
@@ -91,6 +79,22 @@ To use your configured GitHub Codespace, please follow the steps below:
    > ```
    > 
    > Keeping your work saved and up-to-date ensures that nothing is lost and everyone stays happy!
+
+4. If you want to update your private repository with changes from the public repository, use the following commands in the terminal:
+
+   1. If there are new commits in the public repository, you can fetch them:
+
+      ```bash
+       git fetch upstream
+      ```
+      
+   3. Rebase your work on top of the latest changes from the public repository:
+
+      ```bash
+      git rebase upstream/main
+      ```
+
+   4. If there are any merge conflicts, resolve them as needed. This ensures your private repository remains up-to-date while maintaining your own changes.
 
 Good job! You are now ready to start working on the project using the pre-configured environment in your GitHub Codespace. Happy coding! 🚀
 
