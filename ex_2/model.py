@@ -51,13 +51,30 @@ class VanillaCNN(nn.Module):
 
     def __init__(self, channel_in, channel_out, last_layer_bias=True):
         super().__init__()
-        # TODO: Implement the model architecture
-        self.dummy_param = nn.Parameter(torch.empty(1))
-        pass
+        self.conv1 = nn.Conv2d(channel_in, 16, kernel_size=3, stride=1, padding=1)
+        self.conv2 = nn.Conv2d(16, 32, kernel_size=3, stride=1, padding=1)
+        self.conv3 = nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1)
+
+        self.fc1 = nn.LazyLinear(out_features=128)
+        self.fc2 = nn.Linear(128, 64)
+        self.fc3 = nn.Linear(64, channel_out, bias=last_layer_bias)
 
     def forward(self, x):
-        # TODO: Implement the forward pass
-        pass
+        x = F.relu(self.conv1(x))
+        x = F.max_pool2d(x, 2)
+
+        x = F.relu(self.conv2(x))
+        x = F.max_pool2d(x, 2)
+
+        x = F.relu(self.conv3(x))
+        x = F.max_pool2d(x, 2)
+
+        x = x.view(x.size(0), -1)
+
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+
+        return self.fc3(x)
 
 
 def get_representation_layer(representation):
@@ -73,8 +90,10 @@ def get_representation_layer(representation):
                 super().__init__()
 
             def forward(self, x):
-                # TODO: Implement the conversion from polarized intensity to IQU
-                pass
+                I = 0.5 * x.sum(axis=1)
+                Q = x[:, 0] - x[:, 2]
+                U = x[:, 1] - x[:, 3]
+                return torch.stack((I, Q, U), axis=1)
 
         representation_layer = PolCh2IQU()
     elif representation == "DOP+AOP":
@@ -85,8 +104,12 @@ def get_representation_layer(representation):
                 super().__init__()
 
             def forward(self, x):
-                # TODO: Implement the conversion from polarized intensity to DOP and AOP
-                pass
+                I = 0.5 * x.sum(axis=1)
+                Q = x[:, 0] - x[:, 2]
+                U = x[:, 1] - x[:, 3]
+                DOP = torch.sqrt(Q**2 + U**2) / I
+                AOP = 0.5 * torch.arctan2(U, Q)
+                return torch.stack((DOP, AOP), axis=1)
 
         representation_layer = PolCh2DOPAOP()
     elif representation == "IQU+DOP+AOP":
@@ -97,8 +120,12 @@ def get_representation_layer(representation):
                 super().__init__()
 
             def forward(self, x):
-                # TODO: Implement the conversion from polarized intensity to IQU, DOP and AOP
-                pass
+                I = 0.5 * x.sum(axis=1)
+                Q = x[:, 0] - x[:, 2]
+                U = x[:, 1] - x[:, 3]
+                DOP = torch.sqrt(Q**2 + U**2) / I
+                AOP = 0.5 * torch.arctan2(U, Q)
+                return torch.stack((I, Q, U, DOP, AOP), axis=1)
 
         representation_layer = PolCh2IQUDOPAOP()
 
