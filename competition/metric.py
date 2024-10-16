@@ -25,8 +25,12 @@ def match_gates(IoU_matrix):
     best_match = []
     best_score = 0
 
+    # IoU matrix is always fat (more columns than rows)
+    if num_gt > num_pred:
+        IoU_matrix = IoU_matrix.T
+
     # go through all permutations of the gates find the best according to total IoU
-    for perm in permutations(range(num_pred), min(num_gt, num_pred)):
+    for perm in permutations(range(max(num_gt, num_pred)), min(num_gt, num_pred)):
         current_score = sum(IoU_matrix[i, j] for i, j in enumerate(perm))
         if current_score > best_score:
             best_score = current_score
@@ -35,8 +39,10 @@ def match_gates(IoU_matrix):
     best_iou_gt = np.zeros(num_gt, dtype=np.float32)
     best_iou_pred = np.zeros(num_pred, dtype=np.float32)
     for i, j in enumerate(best_match):
-        best_iou_gt[i] = IoU_matrix[i, j]
-        best_iou_pred[j] = IoU_matrix[i, j]
+        gt_idx = j if num_gt > num_pred else i
+        pred_idx = i if num_gt > num_pred else j
+        best_iou_gt[gt_idx] = IoU_matrix[i, j]
+        best_iou_pred[pred_idx] = IoU_matrix[i, j]
 
     return best_iou_gt, best_iou_pred, best_score
 
