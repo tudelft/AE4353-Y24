@@ -17,9 +17,12 @@ class BaseAE(nn.Module):
         return {"x": x, "mu": mu, "recon_x": recon_x}
 
     def loss_fn(self, x, mu, recon_x):
-        # TODO: Implement the loss function (reconstruction loss)
+        # Reconstruction loss
+        recon_loss = 0.5 * nn.functional.mse_loss(recon_x, x, reduction="none").view(
+            x.shape[0], -1
+        ).sum(dim=-1)
 
-        return torch.tensor(0.)
+        return recon_loss.mean(dim=0)
 
     def reconstruct(self, x):
         return self(x)["recon_x"]
@@ -65,16 +68,16 @@ class BetaVAE(BaseAE):
 
     @staticmethod
     def sample_latent(mu, std):
-        """
-        Sample from the latent space using the reparameterization trick.
-        Returns:
-            z: torch.Tensor, the latent space sample
-            eps: torch.Tensor, the noise used for sampling
-        """
-        # TODO: Reparameterization trick
-        return torch.tensor(0.), torch.tensor(0.)
+        eps = torch.randn_like(std)
+        return mu + eps * std, eps
 
     def loss_fn(self, x, mu, log_var, recon_x):
-        # TODO: Implement the loss function (reconstruction loss + beta * KL divergence)
-        return torch.tensor(0.)
+        # Reconstruction loss
+        recon_loss = 0.5 * nn.functional.mse_loss(recon_x, x, reduction="none").view(
+            x.shape[0], -1
+        ).sum(dim=-1)
 
+        # KL divergence loss
+        kl_loss = -0.5 * torch.sum(1 + log_var - mu.pow(2) - log_var.exp(), dim=-1)
+
+        return (recon_loss + self.beta * kl_loss).mean(dim=0)

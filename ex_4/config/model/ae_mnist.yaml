@@ -1,5 +1,5 @@
 _target_:  ex_4.vae.BaseAE
-latent_dim: 4
+latent_dim: 16
 encoder:
   _target_: ex_4.model.EncoderResNetVAE
   latent_dim: ${..latent_dim}

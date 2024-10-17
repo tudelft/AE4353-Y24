@@ -1,5 +1,5 @@
 _target_:  ex_4.vae.BetaVAE
-latent_dim: 4
+latent_dim: 16
 beta: 2
 encoder:
   _target_: ex_4.model.EncoderResNetVAE
