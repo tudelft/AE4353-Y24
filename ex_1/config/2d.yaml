@@ -1,5 +1,5 @@
 trajectory_dim: 2
-dataset_file: /workspaces/AE4353-Y24/data/2D_QUAD_HOVER.npz
+dataset_file: /media/qmissinne/Starry/AE4353/AE4353-Datasets-2024/2D_QUAD_HOVER.npz
 
 batchsize_train: 1024
 batchsize_val: 4096
@@ -13,4 +13,4 @@ model_num_layers: 4
 
 epochs: 2
 validate_per_steps: 500
-lr: 1.0 # to be tuned
+lr: 0.001 # to be tuned
