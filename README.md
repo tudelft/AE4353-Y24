@@ -91,7 +91,7 @@ If you do not have it yet, please sign up for the Student Developer Pack on GitH
 
 If you already have access to GitHub Copilot, it comes pre-installed when you open the devcontainer. Simply log in with your GitHub account and you can start using GitHub Copilot in Visual Studio Code.
 
-### Remote Development
+### Remote Development <span style="color:red;"> (UNTOUCHED - NEEDS CHANGES)
 For those who prefer or need a cloud-based development environment, we are pleased to offer guides for GitHub Codespaces and Kaggle. These platforms let you work remotely without needing local software installations.
 
 - **GitHub Codespaces**: Easy to set up and user-friendly, offering free (limited) access to a CPU instance. It’s great for general coding but does not provide GPU/TPU access.
@@ -218,7 +218,13 @@ The next step is setting up the actual workspace you will be working in. This wi
 	```
 	Similarly, you can de-activate the environment by replacing `activate` with `deactivate`.
 
-3. Data (?)
+3. ***Data***
+
+	what we need for this: 
+		
+		- how to access the data
+		- how to store/save the data
+		- how to use the data
 
 ## Usage
 what this section will contain:
