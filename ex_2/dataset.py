@@ -62,7 +62,8 @@ class PolImgDataset(Dataset):
 
 if __name__ == "__main__":
     dataset = PolImgDataset(
-        "/workspaces/msc-ai-course/data/polarization_dataset", h5=False, augment=True
+        # "/workspaces/msc-ai-course/data/polarization_dataset", h5=False, augment=True
+        "/media/qmissinne/starry/AE4353/AE4353-Datasets-2024/polarization_dataset", h5 = False, augment=True
     )
     sample = dataset[5]
     print(sample)
