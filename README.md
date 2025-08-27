@@ -1,5 +1,5 @@
 # [AE4353] Artificial Intelligence for Aerospace Control and Operations
-> Welcome to the repository of the 2024/2025 [AE4353] Artificial Intelligence for Aerospace Control and Operations course! 🚀
+> Welcome to the repository of the 2025/2026 [AE4353] Artificial Intelligence for Aerospace Control and Operations course! 🚀
 
 
 ## Table of Contents
@@ -26,7 +26,7 @@ This repository contains all the resources for the weekly exercises and competit
 
 To ensure a consistent and easy-to-setup coding environment for everyone, we will be using a combination of [Virtual Studio Code](https://code.visualstudio.com/) and [Kaggle](https://www.kaggle.com/). These will be the official environments throughout the course.
 
-To get started, please refer to this README file for detailed instructions and guidance on setting up your environment correctly. Once your environment is configured, you can begin exploring the code and working on the exercises. If you have any questions or need assistance, feel free to reach out. Happy coding and learning! 🌟
+To get started, please refer to this README file for detailed instructions and guidance on setting up your environment correctly. Once your environment is configured, you can begin exploring the code and working on the exercises. If you have any questions or need assistance, feel free to reach out (see [contact information](#contact-information) to find out how!). Happy coding and learning! 🌟
 
 ## Getting Started
 
@@ -206,7 +206,7 @@ The next step is setting up the actual workspace you will be working in. This wi
 	```
 	conda env create -f env.yml
 	```
-	This will install all dependencies and packages needed to complete the exercises that go along with this course. FOr some further documentation on managing environments, click [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). You can further check if the environment was correctly created by running: 
+	This will install all dependencies and packages needed to complete the exercises that go along with this course. For some further documentation on managing environments, click [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). You can further check if the environment was correctly created by running: 
 	```
 	conda env list
 	```
